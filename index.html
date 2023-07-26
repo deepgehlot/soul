@@ -102,15 +102,25 @@
             .navbar-tops {
                 padding: .5rem 1rem;
             }
-            .main-logo {
+            /* .main-logo {
                 content: url('./assets/upload1/logo_black.png');
-            }
+            } */
         }
         
         @media (min-width: 1240px) {
             .main_video {
                 width: 100%;
             }
+        }
+        
+        @media (min-width: 1080px) {
+            .main_video {
+                width: inherit;
+            }
+        }
+        
+        .bar_color {
+            color: white;
         }
     </style>
 
@@ -126,7 +136,7 @@
                     <nav id="navbar_top" class="navbar navbar-expand-lg">
                         <a href="index.html " aria-current="page " class="navbar-brand w-nav-brand w--current "><img src="./assets/upload1/logo1.png " id="myImageId" loading="eager" alt="Soul type image " class="main-logo" /></a>
                         <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                          <span class="navbar-toggler-icon"><i class="fa fa-bars"></i></span>
+                          <span class="navbar-toggler-icon"><i class="fa fa-bars bar_color " id="icon_id"></i></span>
                         </button>
                         <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
                             <ul class="navbar-nav ">
@@ -159,7 +169,7 @@
                     <div role="listitem " class="static-banner-item w-dyn-item ">
                         <div class="static-banner-content ">
                             <div class="main-wrapper ">
-                                <video class="main_video" autoplay="autoplay" loop="loop" muted defaultMuted playsinline oncontextmenu="return false;" preload="auto">  
+                                <video class="main_video" autoplay="autoplay" loop="loop" muted defaultMuted playsinline oncontextmenu="return false;" preload="auto">
                                     <source src="./assets/upload1/Soul 1i.mp4" type="video/mp4">
                                 </video>
                                 <!-- <img src="./assets/upload1/Soul 1i.mov " loading="lazy " alt=" " sizes="100vw " srcset="./assets/upload1/wrapper1.jpg 500w, ./assets/upload1/wrapper1.jpg
@@ -334,6 +344,11 @@
                         <div class="social-wrapper ">
                             <div class="div-block-100 ">
                                 <div class="footer-social-block-two ">
+                                    <a href="https://twitter.com/ " target="_blank " class="footer-social-link w-inline-block ">
+                                        <div class="social-icon w-embed ">
+                                            <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 512 512"><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><style>svg{fill:#ffffff}</style><path d="M48 64C21.5 64 0 85.5 0 112c0 15.1 7.1 29.3 19.2 38.4L236.8 313.6c11.4 8.5 27 8.5 38.4 0L492.8 150.4c12.1-9.1 19.2-23.3 19.2-38.4c0-26.5-21.5-48-48-48H48zM0 176V384c0 35.3 28.7 64 64 64H448c35.3 0 64-28.7 64-64V176L294.4 339.2c-22.8 17.1-54 17.1-76.8 0L0 176z"/></svg>
+                                        </div>
+                                    </a>
                                     <a href="https://www.instagram.com/soul/ " target="_blank " class="footer-social-link w-inline-block ">
                                         <div class="social-icon w-embed "><svg width="100% " height="100% " viewBox="0 0 14 15 " fill="none " xmlns="http://www.w3.org/2000/svg ">
 <path fill-rule="evenodd " clip-rule="evenodd " d="M4.11366 1.02541C4.86032 0.991765 5.0989 0.983643 6.99998 0.983643C8.90106 0.983643 9.13964 0.991765 9.8863 1.02541C11.0238 1.07705 12.023 1.35436 12.8251 2.15207C13.6272 2.94978 13.906 3.94358 13.958
@@ -449,7 +464,7 @@
                     document.getElementById('nav-link4').classList.add('green_hover');
                     document.getElementById('nav-link5').classList.add('green_hover');
                     document.getElementById("myImageId").src = "./assets/upload1/logo_black.png";
-
+                    document.getElementById('icon_id').classList.remove('bar_color');
                     // add padding top to show content behind navbar
                     navbar_height = document.querySelector('.navbar').offsetHeight;
 
@@ -461,6 +476,7 @@
                     document.getElementById('nav-link3').classList.remove('green_hover');
                     document.getElementById('nav-link4').classList.remove('green_hover');
                     document.getElementById('nav-link5').classList.remove('green_hover');
+                    document.getElementById('icon_id').classList.add('bar_color');
                     document.getElementById("myImageId").src = "./assets/upload1/logo1.png";
                     // remove padding top from body
                     document.body.style.paddingTop = '0';
