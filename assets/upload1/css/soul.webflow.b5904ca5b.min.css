@@ -4672,7 +4672,7 @@ blockquote {
 
 .section.is-hero-gs {
     height: 40vw;
-    background-image: radial-gradient(circle, rgba(0, 0, 0, .4), rgba(255, 255, 255, 0)), url(https://uploads-ssl.webflow.com/62dc3bf0c84234f523cebb22/63b8170bdb2af16cd9b3101d_GBT_BeerFood_11%202.webp);
+    background-image: radial-gradient(circle, rgba(0, 0, 0, .4), rgba(255, 255, 255, 0)), url(../about_wrapper_1.jpg);
     background-position: 0 0, 50%;
     background-size: auto, cover
 }
