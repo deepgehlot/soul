@@ -8,6 +8,16 @@ body {
     margin: 0
 }
 
+@font-face {
+    font-family: Nauticus;
+    src: url('./NauticusSansPress-Bold.ttf');
+}
+
+h1 {
+    font-family: Nauticus !important;
+    color: #41683c !important;
+}
+
 article,
 aside,
 details,
@@ -2312,7 +2322,9 @@ blockquote {
 }
 
 .container.is-1281 {
-    max-width: 1281px
+    max-width: 100%;
+    padding-left: 50px;
+    padding-right: 50px;
 }
 
 .container.is-beers {
@@ -4303,7 +4315,7 @@ blockquote {
 }
 
 .graphic-images.is-abs {
-    top: -40px;
+    /* top: -40px; */
     right: -80px
 }
 
@@ -4489,11 +4501,12 @@ blockquote {
 }
 
 .form-headline {
+    color: white !important;
     width: 451px;
-    letter-spacing: -.32px;
-    font-size: 64px;
-    font-weight: 300;
-    line-height: .9
+    letter-spacing: -.82px;
+    font-size: 50px;
+    font-weight: 200;
+    line-height: 1.2
 }
 
 .div-block-79 {
@@ -5497,7 +5510,7 @@ blockquote {
 }
 
 .cta-text.is-tap {
-    color: #41683c;
+    /* color: #41683c; */
     letter-spacing: .16em;
     font-size: 16px;
     font-weight: 600
