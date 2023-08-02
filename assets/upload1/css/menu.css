@@ -129,10 +129,6 @@ h2 {
     text-align: center;
 }
 
-.tabs>ul li a>span.tab-label {
-    display: none;
-}
-
 .tabs section {
     width: 85%;
     background-color: #fff;
