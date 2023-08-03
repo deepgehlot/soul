@@ -6,48 +6,146 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        *,
+        *::after,
+        *::before {
+            margin: 0;
+            padding: 0;
+            box-sizing: inherit;
+        }
+        
+        html {
+            box-sizing: border-box;
+            font-size: 62.5%;
+        }
+        
+        body {
+            font-family: "Nunito", sans-serif;
+            color: #333;
+            font-weight: 300;
+            line-height: 1.6;
+        }
+        
+        .container {
+            width: 60%;
+            margin: 2rem auto;
+        }
+        
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(8, 1fr);
+            grid-template-rows: repeat(8, 5vw);
+            grid-gap: 1.5rem;
+        }
+        
+        .gallery__img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+        
+        .gallery__item--1 {
+            grid-column-start: 1;
+            grid-column-end: 3;
+            grid-row-start: 1;
+            grid-row-end: 3;
+            /** Alternative Syntax **/
+            /* grid-column: 1 / span 2;  */
+            /* grid-row: 1 / span 2; */
+        }
+        
+        .gallery__item--2 {
+            grid-column-start: 3;
+            grid-column-end: 5;
+            grid-row-start: 1;
+            grid-row-end: 3;
+            /** Alternative Syntax **/
+            /* grid-column: 3 / span 2;  */
+            /* grid-row: 1 / span 2; */
+        }
+        
+        .gallery__item--3 {
+            grid-column-start: 5;
+            grid-column-end: 9;
+            grid-row-start: 1;
+            grid-row-end: 6;
+            /** Alternative Syntax **/
+            /* grid-column: 5 / span 4;
+  grid-row: 1 / span 5; */
+        }
+        
+        .gallery__item--4 {
+            grid-column-start: 1;
+            grid-column-end: 5;
+            grid-row-start: 3;
+            grid-row-end: 6;
+            /** Alternative Syntax **/
+            /* grid-column: 1 / span 4;  */
+            /* grid-row: 3 / span 3; */
+        }
+        
+        .gallery__item--5 {
+            grid-column-start: 1;
+            grid-column-end: 5;
+            grid-row-start: 6;
+            grid-row-end: 9;
+            /** Alternative Syntax **/
+            /* grid-column: 1 / span 4; */
+            /* grid-row: 6 / span 3; */
+        }
+        
+        .gallery__item--6 {
+            grid-column-start: 5;
+            grid-column-end: 9;
+            grid-row-start: 6;
+            grid-row-end: 9;
+            /** Alternative Syntax **/
+            /* grid-column: 5 / span 4; */
+            /* grid-row: 6 / span 3; */
+        }
+        
+        .gallery__img {
+            -webkit-transition: -webkit-transform 0.2s;
+            transition: -webkit-transform 0.2s;
+            transition: transform 0.2s;
+            transition: transform 0.2s, -webkit-transform 0.2s;
+        }
+        
+        .gallery__img:hover {
+            -webkit-transform: scale(1.2);
+            transform: scale(1.2);
+            border-radius: 10px;
+        }
+    </style>
 </head>
 
 <body>
-    <div class="row">
-        <div class="col-2">
-            <nav class="nav flex-column nav-pills" id="v-pills-tab" role="tablist" aria-orientation="vertical">
-                <a class="nav-link active" id="v-pills-home-tab" data-toggle="pill" href="#v-pills-home" role="tab" aria-controls="v-pills-home" aria-selected="true">Home</a>
-                <a class="nav-link" id="v-pills-profile-tab" data-toggle="pill" href="#v-pills-profile" role="tab" aria-controls="v-pills-profile" aria-selected="false">Profile</a>
-                <a class="nav-link" id="v-pills-messages-tab" data-toggle="pill" href="#v-pills-messages" role="tab" aria-controls="v-pills-messages" aria-selected="false">Messages</a>
-                <a class="nav-link" id="v-pills-settings-tab" data-toggle="pill" href="#v-pills-settings" role="tab" aria-controls="v-pills-settings" aria-selected="false">Settings</a>
-            </nav>
-        </div>
 
-        <div class="col-8">
-            <div class="tab-content" id="v-pills-tabContent">
-                <div class="tab-pane fade show active" id="v-pills-home" role="tabpanel" aria-labelledby="v-pills-home-tab">
-                    <ul>
-                        <li>
-                            Hello
-                        </li>
-                        <li>
-                            Hello
-                        </li>
-                        <li>
-                            Hello
-                        </li>
-                        <li>
-                            Hello
-                        </li>
-                        <li>
-                            Hello
-                        </li>
-                    </ul>
-                </div>
-                <div class="tab-pane fade" id="v-pills-profile" role="tabpanel" aria-labelledby="v-pills-profile-tab">Second</div>
-                <div class="tab-pane fade" id="v-pills-messages" role="tabpanel" aria-labelledby="v-pills-messages-tab">Third</div>
-                <div class="tab-pane fade" id="v-pills-settings" role="tabpanel" aria-labelledby="v-pills-settings-tab">Last</div>
-            </div>
+    <div class="container">
+        <div class="gallery">
+            <figure class="gallery__item gallery__item--1">
+                <img src="./assets/upload1/about_bott.png" alt="Gallery image 1" class="gallery__img">
+            </figure>
+            <figure class="gallery__item gallery__item--2">
+                <img src="./assets/upload1/soul_exp.png" alt="Gallery image 2" class="gallery__img">
+            </figure>
+            <figure class="gallery__item gallery__item--3">
+                <img src="./assets/upload1/our_craft_beers.png" alt="Gallery image 3" class="gallery__img">
+            </figure>
+            <figure class="gallery__item gallery__item--4">
+                <img src="./assets/upload1/exp2.jpeg" alt="Gallery image 4" class="gallery__img">
+            </figure>
+            <figure class="gallery__item gallery__item--5">
+                <img src="./assets/upload1/DSC04571.jpg" alt="Gallery image 5" class="gallery__img">
+            </figure>
+            <figure class="gallery__item gallery__item--6">
+                <img src="./assets/upload1/event1.png" alt="Gallery image 6" class="gallery__img">
+            </figure>
         </div>
 
     </div>
-
 
 
 
