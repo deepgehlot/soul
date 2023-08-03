@@ -9716,6 +9716,9 @@ blockquote {
     body {
         font-size: 1.5vw
     }
+    .container {
+        padding: 0 !important;
+    }
     .container.is-tab,
     .container-small {
         width: 90%
@@ -12314,4 +12317,18 @@ blockquote {
     font-weight: 600;
     font-style: normal;
     font-display: swap;
+}
+
+@media (max-width: 763px) {
+    .pad-top {
+        width: 100%;
+        padding-top: 2rem;
+    }
+}
+
+@media (max-width: 999px) {
+    .pad-top {
+        width: 100%;
+        padding-top: 0rem;
+    }
 }
